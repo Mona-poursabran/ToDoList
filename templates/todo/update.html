@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="d-flex mt-5" method = 'POST'>
+    {% csrf_token %}
+  <input class="form-control mr-sm-2" type="search" placeholder="{{todo.item}}" value="{{todo.item}}" aria-label="search" name='item'>
+  <input type="hidden" value="todo.complete" name='compelet'>
+  <button class="btn btn-outline-info ms-2" type="submit">Edit</button>
+</form>
+
+{% endblock content %}
